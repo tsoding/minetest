@@ -1,11 +1,22 @@
+| Minecraft | Minetest |
+|-----------+----------|
+| block     | node     |
+| chunk     | block    |
+| ???       | chunk    |
+
 * TODO Waving liquid render bug if solid block is above liquid · Issue #9005 · minetest/minetest · GitHub
-  - [-] [[https://github.com/minetest/minetest/issues/9005][Waving liquid render bug if solid block is above liquid · Issue #9005 · minetest/minetest · GitHub]]
-    - [X] file:src/client/shader.cpp::715
-      - [X] Probably useless
+  - [ ] [[https://github.com/minetest/minetest/issues/9005][Waving liquid render bug if solid block is above liquid · Issue #9005 · minetest/minetest · GitHub]]
+    - [ ] file:src/client/shader.cpp::715
+      - [ ] file:client/shaders/nodes_shader/opengl_vertex.glsl::79
     - [ ] file:src/mapblock.h::1
       - [ ] MapNode
         - [ ] file:src/mapnode.h::117
           - [ ] .cpp
       - [ ] Map
         - [ ] file:src/client/clientmap.h::89
-  
+    - [ ] file:src/client/content_mapblock.cpp::1415
+      - [ ] file:src/client/content_mapblock.cpp::1377
+        - [ ] file:src/client/mapblock_mesh.h::927
+          - [ ] file:src/client/mapblock_mesh.cpp::1076
+            - [ ] file:src/client/meshgen/collector.h::37
+              - [ ] file:src/client/mapblock_mesh.cpp::663
