@@ -20,3 +20,23 @@
           - [ ] file:src/client/mapblock_mesh.cpp::1076
             - [ ] file:src/client/meshgen/collector.h::37
               - [ ] file:src/client/mapblock_mesh.cpp::663
+  - [X] [[https://github.com/minetest/minetest/issues/3075][minetest/minetest#3075 Waving liquid render bug if solid block is above liquid]]
+    - [X] [[https://github.com/minetest/minetest/pull/3109][minetest/minetest#3109 Add of liquid top tile to the mesh when waving shader ...]]
+      - [X] Try to apply the patch and see what's up
+        - [X] file:src/nodedef.cpp::734
+          - [X] This doesn't fix anything
+  - [ ] Not full block solution
+    - [ ] Bed is not part of the engine. It's part of the minetest_game
+      - [ ] file:games/minetest_game/mods/beds/api.lua::26
+        - [ ] drawtype = "nodebox"
+        - [ ] node_box = {
+    - [ ] file:games/minetest_game/mods/default/nodes.lua::2180
+    - [ ] file:src/client/mapblock_mesh.cpp::707
+
+
+* TODO [Feature Request] Add a Music Volume Slider · Issue #9057 · minetest/minetest · GitHub
+  - [ ] [[https://github.com/minetest/minetest/issues/9057][minetest/minetest#9057 {Feature Request} Add a Music Volume Slider]]
+    - [ ] How to add stuff to settings menu
+    - [ ] How to register sounds
+
+  
