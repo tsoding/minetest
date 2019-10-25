@@ -696,17 +696,17 @@ static u8 face_contents(content_t m1, content_t m2, bool *equivalent,
 	}
 
 	if (c1 > c2) {
-        if (g_settings->getBool("enable_waving_water") && f2.isLiquid() && tid1 == 1) { // this is hackish
-            *equivalent = true; // this is hackish
-            return 2;           // this is hackish
-        }                       // this is hackish
+        if (g_settings->getBool("enable_waving_water") && f2.isLiquid() && tid1 == 1) {
+            *equivalent = true;
+            return 2;
+        }
 		return 1;
     }
 
-    if (g_settings->getBool("enable_waving_water") && f1.isLiquid() && tid1 == 0) { // this is hackish
-        *equivalent = true;     // this is hackish
-        return 1;               // this is hackish
-    }                           // this is hackish
+    if (g_settings->getBool("enable_waving_water") && f1.isLiquid() && tid1 == 0) {
+        *equivalent = true;
+        return 1;
+    }
 	return 2;
 }
 
