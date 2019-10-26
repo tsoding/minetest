@@ -700,14 +700,12 @@ static u8 face_contents(content_t m1, content_t m2, bool *equivalent,
 
 	if (c1 > c2) {
         if (enable_waving_water && f2.isLiquid() && tid1 == 1) {
-            *equivalent = true;
             return 2;
         }
 		return 1;
     }
 
     if (enable_waving_water && f1.isLiquid() && tid1 == 0) {
-        *equivalent = true;
         return 1;
     }
 	return 2;
