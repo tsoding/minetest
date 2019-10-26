@@ -663,6 +663,9 @@ static void makeFastFace(const TileSpec &tile, u16 li0, u16 li1, u16 li2, u16 li
 static u8 face_contents(content_t m1, content_t m2, bool *equivalent,
                         const NodeDefManager *ndef, u16 tid1)
 {
+    static thread_local const float enable_waving_water =
+        g_settings->getBool("enable_waving_water");
+
 	*equivalent = false;
 
 	if (m1 == m2 || m1 == CONTENT_IGNORE || m2 == CONTENT_IGNORE)
@@ -696,14 +699,14 @@ static u8 face_contents(content_t m1, content_t m2, bool *equivalent,
 	}
 
 	if (c1 > c2) {
-        if (g_settings->getBool("enable_waving_water") && f2.isLiquid() && tid1 == 1) {
+        if (enable_waving_water && f2.isLiquid() && tid1 == 1) {
             *equivalent = true;
             return 2;
         }
 		return 1;
     }
 
-    if (g_settings->getBool("enable_waving_water") && f1.isLiquid() && tid1 == 0) {
+    if (enable_waving_water && f1.isLiquid() && tid1 == 0) {
         *equivalent = true;
         return 1;
     }
